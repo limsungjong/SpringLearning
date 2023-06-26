@@ -1,5 +1,6 @@
 package com.example.springsecurity.entity;
 
+import com.example.springsecurity.dto.UserDto;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Getter;
@@ -10,7 +11,7 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
-@Entity
+@Entity(name = "user")
 @Builder
 @Getter
 @AllArgsConstructor
@@ -18,8 +19,19 @@ import javax.persistence.Id;
 public class UserEntity {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
+    private int userId;
 
+    private String userEmail;
     private String userName;
-    private String password;
+    private String userPassword;
+
+    static public UserDto toDto(UserEntity userEntity) {
+        return UserDto
+                .builder()
+                .userId(userEntity.getUserId())
+                .userEmail(userEntity.getUserEmail())
+                .userName(userEntity.getUserName())
+                .userPassword(userEntity.getUserPassword())
+                .build();
+    }
 }
