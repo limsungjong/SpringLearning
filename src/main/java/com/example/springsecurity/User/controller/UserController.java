@@ -1,7 +1,7 @@
-package com.example.springsecurity.controller;
+package com.example.springsecurity.User.controller;
 
-import com.example.springsecurity.domain.dto.UserJoinReqBody;
-import com.example.springsecurity.service.UserService;
+import com.example.springsecurity.User.domain.dto.UserJoinReqBody;
+import com.example.springsecurity.User.service.UserService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.PostMapping;

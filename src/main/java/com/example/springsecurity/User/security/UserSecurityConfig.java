@@ -1,4 +1,4 @@
-package com.example.springsecurity.config;
+package com.example.springsecurity.User.security;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -8,10 +8,9 @@ import org.springframework.security.web.SecurityFilterChain;
 
 @EnableWebSecurity
 @Configuration
-public class CustomSecurityConfig {
-
+public class UserSecurityConfig {
     @Bean
-    public SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception {
+    public SecurityFilterChain userSecurityFilterChain(HttpSecurity http) throws Exception {
         http
                 .authorizeRequests((req) -> req
                         .antMatchers("/","/home").permitAll()

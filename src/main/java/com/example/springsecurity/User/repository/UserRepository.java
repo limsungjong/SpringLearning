@@ -1,6 +1,6 @@
-package com.example.springsecurity.repository;
+package com.example.springsecurity.User.repository;
 
-import com.example.springsecurity.entity.UserEntity;
+import com.example.springsecurity.User.entity.UserEntity;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 

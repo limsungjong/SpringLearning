@@ -1,4 +1,4 @@
-package com.example.springsecurity.domain.dto;
+package com.example.springsecurity.User.domain.dto;
 
 import lombok.Getter;
 
