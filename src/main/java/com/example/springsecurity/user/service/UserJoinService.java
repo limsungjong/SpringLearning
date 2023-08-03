@@ -1,6 +1,6 @@
 package com.example.springsecurity.user.service;
 
-import com.example.springsecurity.user.domain.dto.UserJoinReqBody;
+import com.example.springsecurity.user.domain.dto.UserJoinRequestBody;
 import com.example.springsecurity.user.entity.UserEntity;
 import com.example.springsecurity.user.repository.UserRepository;
 import lombok.RequiredArgsConstructor;
@@ -11,7 +11,7 @@ import org.springframework.stereotype.Service;
 public class UserJoinService {
     private final UserRepository userRepository;
 
-    public String userJoin(UserJoinReqBody requestBody) {
+    public String userJoin(UserJoinRequestBody requestBody) {
 
         // 유저 이메일 중복 체크
         userRepository.findByUserEmail(requestBody.getUserEmail()).ifPresent(v -> {
