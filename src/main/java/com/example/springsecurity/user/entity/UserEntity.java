@@ -1,6 +1,6 @@
-package com.example.springsecurity.User.entity;
+package com.example.springsecurity.user.entity;
 
-import com.example.springsecurity.User.dto.UserDto;
+import com.example.springsecurity.user.dto.UserDto;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Getter;
@@ -12,10 +12,10 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
 @Entity(name = "user")
-@Builder
 @Getter
-@AllArgsConstructor
 @NoArgsConstructor
+@Builder
+@AllArgsConstructor
 public class UserEntity {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)

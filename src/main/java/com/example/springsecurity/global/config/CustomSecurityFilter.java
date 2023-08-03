@@ -1,4 +1,4 @@
-package com.example.springsecurity.security;
+package com.example.springsecurity.global.config;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -13,12 +13,12 @@ public class CustomSecurityFilter {
     public SecurityFilterChain userSecurityFilterChain(HttpSecurity http) throws Exception {
         http
                 .authorizeRequests((req) -> req
-                        .antMatchers("/user").authenticated()
+                        .antMatchers("/user/**").authenticated()
                         .antMatchers("/admin").hasRole("ADMIN")
-                        .antMatchers("/")
+                        .anyRequest().permitAll()
                 )
                 .formLogin((form) -> form
-                        .loginPage("/login")
+                        .loginPage("/user/login")
                         .loginProcessingUrl("/login")
                         .failureUrl("/login")
                         .permitAll())
