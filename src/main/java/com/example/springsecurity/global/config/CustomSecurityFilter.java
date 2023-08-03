@@ -12,6 +12,7 @@ public class CustomSecurityFilter {
     @Bean
     public SecurityFilterChain userSecurityFilterChain(HttpSecurity http) throws Exception {
         http
+                .csrf().disable()
                 .authorizeRequests((req) -> req
                         .antMatchers("/user/**").authenticated()
                         .antMatchers("/admin").hasRole("ADMIN")
