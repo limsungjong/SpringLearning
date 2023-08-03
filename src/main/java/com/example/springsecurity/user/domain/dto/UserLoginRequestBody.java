@@ -3,8 +3,8 @@ package com.example.springsecurity.user.domain.dto;
 import lombok.Getter;
 
 @Getter
-public class UserJoinReqBody {
-    private String userEmail;
-    private String userPassword;
+public class UserLoginRequestBody {
     private String userName;
+
+    private String userPassword;
 }
