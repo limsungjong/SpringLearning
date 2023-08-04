@@ -18,6 +18,12 @@ public class UserAPI {
         return ResponseEntity.ok("login");
     }
 
+    @GetMapping("/join")
+    public ResponseEntity userGetLogin(@RequestBody UserJoinRequestBody req) {
+
+        return ResponseEntity.ok("ok");
+    }
+
     @PostMapping("/join")
     public ResponseEntity userPostJoin(@RequestBody UserJoinRequestBody req) {
         try {
