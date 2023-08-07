@@ -1,8 +1,8 @@
-package com.example.springsecurity.user.api;
+package com.example.SpringLearning.user.api;
 
-import com.example.springsecurity.user.domain.dto.UserJoinRequestBody;
-import com.example.springsecurity.user.domain.dto.UserLoginRequestBody;
-import com.example.springsecurity.user.service.UserJoinService;
+import com.example.SpringLearning.user.domain.dto.UserJoinRequestBody;
+import com.example.SpringLearning.user.domain.dto.UserLoginRequestBody;
+import com.example.SpringLearning.user.service.UserJoinService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -18,6 +18,12 @@ public class UserAPI {
         return ResponseEntity.ok("login");
     }
 
+    @GetMapping("/join")
+    public ResponseEntity userGetLogin(@RequestBody UserJoinRequestBody req) {
+
+        return ResponseEntity.ok("ok");
+    }
+
     @PostMapping("/join")
     public ResponseEntity userPostJoin(@RequestBody UserJoinRequestBody req) {
         try {
@@ -27,11 +33,5 @@ public class UserAPI {
             System.out.println(runtimeException.getMessage());
             return ResponseEntity.badRequest().body(runtimeException.getMessage());
         }
-    }
-
-    @GetMapping("/join")
-    public ResponseEntity userGetJoin(@RequestBody UserJoinRequestBody req) {
-        System.out.println(req.getUserEmail());
-        return ResponseEntity.ok("join");
     }
 }

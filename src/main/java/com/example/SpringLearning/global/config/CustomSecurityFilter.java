@@ -1,4 +1,4 @@
-package com.example.springsecurity.global.config;
+package com.example.SpringLearning.global.config;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -12,6 +12,7 @@ public class CustomSecurityFilter {
     @Bean
     public SecurityFilterChain userSecurityFilterChain(HttpSecurity http) throws Exception {
         http
+                .csrf().disable()
                 .authorizeRequests((req) -> req
                         .antMatchers("/user/**").authenticated()
                         .antMatchers("/admin").hasRole("ADMIN")

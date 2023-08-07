@@ -1,4 +1,4 @@
-package com.example.springsecurity.user.controller;
+package com.example.SpringLearning.user.controller;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;

@@ -1,4 +1,4 @@
-package com.example.springsecurity.admin.controller;
+package com.example.SpringLearning.admin.controller;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
