@@ -1,4 +1,4 @@
-package com.example.springsecurity.global.config;
+package com.example.SpringLearning.global.config;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;

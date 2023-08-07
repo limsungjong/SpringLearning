@@ -1,8 +1,8 @@
-package com.example.springsecurity.user.service;
+package com.example.SpringLearning.user.service;
 
-import com.example.springsecurity.user.domain.dto.UserJoinRequestBody;
-import com.example.springsecurity.user.entity.UserEntity;
-import com.example.springsecurity.user.repository.UserRepository;
+import com.example.SpringLearning.user.domain.dto.UserJoinRequestBody;
+import com.example.SpringLearning.user.entity.UserEntity;
+import com.example.SpringLearning.user.repository.UserRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
