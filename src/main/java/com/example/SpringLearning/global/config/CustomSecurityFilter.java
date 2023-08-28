@@ -19,8 +19,7 @@ public class CustomSecurityFilter {
                         .anyRequest().permitAll()
                 )
                 .formLogin((form) -> form
-                        .loginPage("/user/login")
-                        .loginProcessingUrl("/login")
+                        .loginPage("login")
                         .failureUrl("/login")
                         .permitAll())
                 .logout((logout) -> logout.permitAll());
